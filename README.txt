@@ -1,1 +1,1 @@
-#Projekt na narzedzia programistyczne. 1234
+#Projekt na narzedzia programistyczne.
