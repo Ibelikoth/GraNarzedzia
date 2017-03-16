@@ -1,0 +1,1 @@
+Gra zrobiona na narzedzia programistyczne w 4 osoby.
