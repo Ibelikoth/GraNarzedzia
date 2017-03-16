@@ -8,9 +8,9 @@
   <sprites name="sprites">
     <sprites name="Player">
       <sprites name="Walk">
-        <sprite>sprites\spr_Player_Stay_Down</sprite>
-        <sprite>sprites\spr_Player_Run_Left</sprite>
-        <sprite>sprites\spr_Player_Stay_Up</sprite>
+        <sprite>sprites\spr_Player_Walk_Down</sprite>
+        <sprite>sprites\spr_Player_Walk_Left</sprite>
+        <sprite>sprites\spr_Player_Walk_Up</sprite>
         <sprite>sprites\spr_Player_Walk_Right</sprite>
       </sprites>
       <sprites name="Idle">
@@ -21,19 +21,23 @@
       </sprites>
     </sprites>
     <sprite>sprites\spr_Collision</sprite>
-    <sprite>sprites\sprite10</sprite>
+    <sprite>sprites\spr_Column</sprite>
     <sprite>sprites\spr_Collision_Off</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_allinone</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\Find_Depth.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_Player</object>
     <object>objects\obj_Collision</object>
+    <object>objects\ocj_Column</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\rm_TestRoom</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
