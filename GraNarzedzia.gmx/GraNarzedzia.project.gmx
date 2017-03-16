@@ -8,9 +8,9 @@
   <sprites name="sprites">
     <sprites name="Player">
       <sprites name="Walk">
-        <sprite>sprites\spr_Player_Stay_Down</sprite>
-        <sprite>sprites\spr_Player_Run_Left</sprite>
-        <sprite>sprites\spr_Player_Stay_Up</sprite>
+        <sprite>sprites\spr_Player_Walk_Down</sprite>
+        <sprite>sprites\spr_Player_Walk_Left</sprite>
+        <sprite>sprites\spr_Player_Walk_Up</sprite>
         <sprite>sprites\spr_Player_Walk_Right</sprite>
       </sprites>
       <sprites name="Idle">
@@ -37,7 +37,7 @@
     <object>objects\ocj_Column</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\rm_TestRoom</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
