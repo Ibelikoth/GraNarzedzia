@@ -1,1 +1,1 @@
-dzialaj plsiak
+dupa
