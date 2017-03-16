@@ -1,1 +1,1 @@
-#Projekt na narzêdzia programistyczne.
+#Projekt na narzedzia programistyczne.
