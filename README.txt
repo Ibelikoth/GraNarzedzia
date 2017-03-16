@@ -1,1 +1,1 @@
-asd
+dzialaj pliska
