@@ -85,6 +85,9 @@
     <instance objName="obj_Collision" x="242" y="538" name="inst_7F44904A" locked="0" code="" scaleX="2.86999988555908" scaleY="0.400000005960464" colour="4294967295" rotation="0"/>
     <instance objName="obj_Collision" x="253" y="539" name="inst_7C70C893" locked="0" code="" scaleX="2.80999994277954" scaleY="0.25" colour="4294967295" rotation="30"/>
     <instance objName="obj_Collision" x="241" y="515" name="inst_4B19CB50" locked="0" code="" scaleX="4.75" scaleY="-0.189999997615814" colour="4294967295" rotation="30"/>
+    <instance objName="ocj_Column" x="96" y="352" name="inst_28289607" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ocj_Column" x="192" y="352" name="inst_529006AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ocj_Column" x="192" y="352" name="inst_067764F1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_allinone" x="832" y="96" w="96" h="96" xo="512" yo="832" id="10000198" name="inst_739FC2F0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
