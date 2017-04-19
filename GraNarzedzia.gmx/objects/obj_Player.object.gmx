@@ -8,6 +8,33 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Deklaracja zmiennych globalnych
+Attacking = false;
+Direction = "Down"
+Player_x = xstart;
+Player_y = ystart;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -25,30 +52,51 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Poruszanie na dol
-if(keyboard_check(ord('S')) &amp;&amp; (place_free(x,y+2))){
-//jesli gracz wcisnie 's' i beda dwa miejsca w na vektor y wolne to zrob 
-    y+=2;
-    sprite_index = spr_Player_Walk_Down; 
-    //przypisanie animacji do obiektu bo obiekt robi sie z jednej klatk
-    image_speed = 0.2;
-    //zwolnienie animacji bo zapieprzala jak szalona
-}
-//Poruszanie na gore
-if(keyboard_check(ord('W')) &amp;&amp; (place_free(x,y-2))){
-    y-=2;
-    sprite_index = spr_Player_Walk_Up; 
-    image_speed = 0.2;
-}
-if(keyboard_check(ord('D')) &amp;&amp; (place_free(x+2,y))){
-    x+=2;
-    sprite_index = spr_Player_Walk_Right; 
-    image_speed = 0.2;
-}
-if(keyboard_check(ord('A')) &amp;&amp; (place_free(x-2,y))){
-    x-=2;
-    sprite_index = spr_Player_Walk_Left; 
-    image_speed = 0.2;
+            <string>///Movement
+if (Attacking = false){
+    //Poruszanie na dol
+    if(keyboard_check(ord('S')) &amp;&amp; (place_free(x,y+4))){
+    //jesli gracz wcisnie 's' i beda dwa miejsca w na vektor y wolne to zrob 
+        y+=2;
+        sprite_index = spr_Player_Walk_Down; 
+        //przypisanie animacji do obiektu bo obiekt robi sie z jednej klatk
+        image_speed = 0.5;
+        //zwolnienie animacji bo zapieprzala jak szalona
+        Direction = "Down";
+    }
+    //Poruszanie na gore
+    if(keyboard_check(ord('W')) &amp;&amp; (place_free(x,y-4))){
+        y-=2;
+        sprite_index = spr_Player_Walk_Up; 
+        image_speed = 0.5;
+        Direction = "Up";
+    }
+    if(keyboard_check(ord('D')) &amp;&amp; (place_free(x+4,y))){
+        x+=2;
+        sprite_index = spr_Player_Walk_Right; 
+        image_speed = 0.5;
+        Direction = "Right";
+    }
+    if(keyboard_check(ord('A')) &amp;&amp; (place_free(x-4,y))){
+        x-=2;
+        sprite_index = spr_Player_Walk_Left; 
+        image_speed = 0.5;
+        Direction = "Left";
+    }
+    if(!keyboard_check(ord("D")) &amp;&amp; !keyboard_check(ord("A")) &amp;&amp; !keyboard_check(ord("S")) &amp;&amp;!keyboard_check(ord("W"))){
+        if(Direction = "Down"){
+           sprite_index = spr_Player_Down;
+        }
+        if(Direction = "Up"){
+            sprite_index = spr_Player_Up;
+        }
+        if(Direction = "Left"){
+            sprite_index = spr_Player_Left;
+        }
+        if(Direction = "Right"){
+            sprite_index = spr_Player_Right;
+        }
+   }
 }
 </string>
           </argument>
@@ -94,6 +142,55 @@ if(keyboard_check(ord('A')) &amp;&amp; (place_free(x-2,y))){
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Atacking
+if (Attacking = false){
+    if(mouse_check_button_pressed(mb_left)){
+        if(Direction = "Down"){//w jakim kierunku postac jest ustawion  
+            sprite_index = spr_Player_Attack_Down;//wybieramy ktora animacje startujemy
+            image_speed = 0.5;//z jaka predkoscia dziala animacja, dafault 1
+            image_index = 0;//od jakiego spr zaczynamy animacje 
+            Attacking = true;//zmieniamy attacking na true zeby nie mozna bylo atakowac i chodzic
+        }
+        if(Direction = "Up"){
+            sprite_index = spr_Player_Attack_Up;
+            image_speed = 0.5;
+            image_index = 0;
+            Attacking = true;
+        }
+        if(Direction = "Left"){
+            sprite_index = spr_Player_Attack_Left;
+            image_speed = 0.5;
+            image_index = 0;
+            Attacking = true;
+        }
+        if(Direction = "Right"){
+            sprite_index = spr_Player_Attack_Right;
+            image_speed = 0.5;
+            image_index = 0;
+            Attacking = true;
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="4" ename="obj_Teleport">
       <action>
@@ -115,6 +212,32 @@ if(keyboard_check(ord('A')) &amp;&amp; (place_free(x-2,y))){
             <string>Player_x = other.Player_x;
 Player_y = other.Player_y;
 room_goto(other.Warp_Room);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if ( (sprite_index = spr_Player_Attack_Up) or (sprite_index = spr_Player_Attack_Down) or (sprite_index = spr_Player_Attack_Left) or (sprite_index = spr_Player_Attack_Right)){
+    Attacking = false;
+    speed=0;
+}
 </string>
           </argument>
         </arguments>

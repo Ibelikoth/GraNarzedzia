@@ -19,11 +19,18 @@
         <sprite>sprites\spr_Player_Right</sprite>
         <sprite>sprites\spr_Player_Up</sprite>
       </sprites>
+      <sprites name="Attack">
+        <sprite>sprites\spr_Player_Attack_Up</sprite>
+        <sprite>sprites\spr_Player_Attack_Down</sprite>
+        <sprite>sprites\spr_Player_Attack_Left</sprite>
+        <sprite>sprites\spr_Player_Attack_Right</sprite>
+      </sprites>
     </sprites>
     <sprite>sprites\spr_Collision</sprite>
     <sprite>sprites\spr_Column</sprite>
     <sprite>sprites\spr_Collision_Off</sprite>
     <sprite>sprites\spr_Teleport</sprite>
+    <sprite>sprites\spr_Health_Mana</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_allinone</background>
@@ -37,6 +44,7 @@
     <object>objects\obj_Collision</object>
     <object>objects\ocj_Column</object>
     <object>objects\obj_Teleport</object>
+    <object>objects\obj_HUD</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_TestRoom</room>
