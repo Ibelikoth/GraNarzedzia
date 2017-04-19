@@ -33,6 +33,7 @@ depth = room_height * -1;
         </arguments>
       </action>
     </event>
+<<<<<<< HEAD
     <event eventtype="5" enumb="32">
       <action>
         <libid>1</libid>
@@ -57,6 +58,8 @@ global.mana -=1;
         </arguments>
       </action>
     </event>
+=======
+>>>>>>> refs/remotes/origin/master
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>

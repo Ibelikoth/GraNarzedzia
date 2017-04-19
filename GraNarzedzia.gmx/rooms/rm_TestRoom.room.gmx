@@ -51,7 +51,6 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_Player" x="224" y="256" name="inst_15578DAD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Collision" x="0" y="0" name="inst_A734B274" locked="0" code="" scaleX="2" scaleY="44" colour="4294967295" rotation="0"/>
     <instance objName="obj_Collision" x="32" y="0" name="inst_AED356AE" locked="0" code="" scaleX="61.8666648864746" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_Collision" x="32" y="672" name="inst_D1586C1A" locked="0" code="" scaleX="60" scaleY="1" colour="4294967295" rotation="0"/>
@@ -61,7 +60,7 @@
     <instance objName="obj_Collision" x="672" y="520" name="inst_FCB611BF" locked="0" code="" scaleX="2" scaleY="1.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_Collision" x="800" y="480" name="inst_1D78C909" locked="0" code="" scaleX="2.05999994277954" scaleY="3.25" colour="4294967295" rotation="0"/>
     <instance objName="obj_Collision" x="832" y="320" name="inst_A4A46158" locked="0" code="" scaleX="2.0625" scaleY="5.73333311080933" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Collision" x="128" y="480" name="inst_C11EC67A" locked="0" code="" scaleX="2.0625" scaleY="3.1875" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Collision" x="128" y="486" name="inst_C11EC67A" locked="0" code="" scaleX="1.92999994754791" scaleY="2.75" colour="4294967295" rotation="0"/>
     <instance objName="obj_Collision" x="257" y="360" name="inst_7F632BCF" locked="0" code="" scaleX="2" scaleY="1.4375" colour="4294967295" rotation="0"/>
     <instance objName="obj_Collision" x="480" y="224" name="inst_80DF8848" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_Collision" x="608" y="256" name="inst_CC0ACA27" locked="0" code="" scaleX="2" scaleY="6.06666660308838" colour="4294967295" rotation="0"/>
@@ -82,14 +81,17 @@
     <instance objName="obj_Collision" x="305" y="476" name="inst_38D3A699" locked="0" code="" scaleX="4" scaleY="0.330000013113022" colour="4294967295" rotation="0"/>
     <instance objName="obj_Collision" x="287" y="515" name="inst_F32F069C" locked="0" code="" scaleX="1.12999999523163" scaleY="1.73333334922791" colour="4294967295" rotation="0"/>
     <instance objName="obj_Collision" x="253" y="539" name="inst_373BA743" locked="0" code="" scaleX="2.80999994277954" scaleY="0.25" colour="4294967295" rotation="30"/>
-    <instance objName="obj_Collision" x="242" y="538" name="inst_7F44904A" locked="0" code="" scaleX="2.86999988555908" scaleY="0.400000005960464" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Collision" x="242" y="541" name="inst_7F44904A" locked="0" code="" scaleX="2.86999988555908" scaleY="0.400000005960464" colour="4294967295" rotation="0"/>
     <instance objName="obj_Collision" x="253" y="539" name="inst_7C70C893" locked="0" code="" scaleX="2.80999994277954" scaleY="0.25" colour="4294967295" rotation="30"/>
-    <instance objName="obj_Collision" x="241" y="515" name="inst_4B19CB50" locked="0" code="" scaleX="4.75" scaleY="-0.189999997615814" colour="4294967295" rotation="30"/>
+    <instance objName="obj_Collision" x="240" y="512" name="inst_4B19CB50" locked="0" code="" scaleX="4.75" scaleY="-0.189999997615814" colour="4294967295" rotation="27"/>
     <instance objName="ocj_Column" x="96" y="352" name="inst_28289607" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ocj_Column" x="192" y="352" name="inst_529006AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ocj_Column" x="192" y="352" name="inst_067764F1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Teleport" x="320" y="352" name="inst_6F5EDE4E" locked="0" code="Player_x=113;&#xA;Player_y=112;&#xA;Warp_Room=rm_Teleport;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_HUD" x="32" y="704" name="inst_EC89E1EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+<<<<<<< HEAD
+=======
+    <instance objName="obj_Player" x="128" y="256" name="inst_4EB95DBF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+>>>>>>> refs/remotes/origin/master
   </instances>
   <tiles>
     <tile bgName="bg_allinone" x="832" y="96" w="96" h="96" xo="512" yo="832" id="10000198" name="inst_739FC2F0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
