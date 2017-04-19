@@ -45,6 +45,7 @@
     <object>objects\ocj_Column</object>
     <object>objects\obj_Teleport</object>
     <object>objects\obj_HUD</object>
+    <object>objects\Obj_Player_Motion_Blur</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_TestRoom</room>

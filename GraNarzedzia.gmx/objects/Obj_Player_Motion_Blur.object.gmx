@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,15 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.stamina = 100;
-global.mana = 100;
-depth = room_height * -1;
+            <string>image_alpha = 0.5;
+image_speed = 0;
+image_index = global.Subimage;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -50,10 +50,8 @@ depth = room_height * -1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_healthbar(view_xview + 8, view_yview + 8, view_xview + 98, view_yview + 16, global.stamina, c_black, c_red, c_red, 0, true, false );
-draw_healthbar(view_xview + 8, view_yview + 18, view_xview + 64, view_yview + 26, global.mana, c_black, c_blue, c_blue, 0, true, false );
-
-draw_sprite(spr_Health_Mana,0,view_xview, view_yview);
+            <string>image_index = Obj_Player.image_index;
+sprite_index = Obj_Player.sprite_index;
 </string>
           </argument>
         </arguments>

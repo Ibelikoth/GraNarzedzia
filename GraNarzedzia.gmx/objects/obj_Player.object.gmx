@@ -25,12 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-<<<<<<< HEAD
-            <string>Attacking = false;
-=======
             <string>///Deklaracja zmiennych globalnych
+
+global.Subimage = 0;
+Speed = 2;
 Attacking = false;
->>>>>>> refs/remotes/origin/master
 Direction = "Down"
 Player_x = xstart;
 Player_y = ystart;
@@ -59,77 +58,42 @@ Player_y = ystart;
             <string>///Movement
 if (Attacking = false){
     //Poruszanie na dol
-<<<<<<< HEAD
-    if(keyboard_check(ord('S')) &amp;&amp; (place_free(x,y+2))){
-=======
-    if(keyboard_check(ord('S')) &amp;&amp; (place_free(x,y+4))){
->>>>>>> refs/remotes/origin/master
+    if(keyboard_check(ord('S')) &amp;&amp; (place_free(x,y+Speed))){
     //jesli gracz wcisnie 's' i beda dwa miejsca w na vektor y wolne to zrob 
-        y+=2;
+        y+=Speed;
         sprite_index = spr_Player_Walk_Down; 
         //przypisanie animacji do obiektu bo obiekt robi sie z jednej klatk
-<<<<<<< HEAD
-        image_speed = 0.2;
-=======
         image_speed = 0.5;
->>>>>>> refs/remotes/origin/master
         //zwolnienie animacji bo zapieprzala jak szalona
         Direction = "Down";
     }
     //Poruszanie na gore
-<<<<<<< HEAD
-    if(keyboard_check(ord('W')) &amp;&amp; (place_free(x,y-2))){
-        y-=2;
-        sprite_index = spr_Player_Walk_Up; 
-        image_speed = 0.2;
-        Direction = "Up";
-    }
-    if(keyboard_check(ord('D')) &amp;&amp; (place_free(x+2,y))){
-        x+=2;
-        sprite_index = spr_Player_Walk_Right; 
-        image_speed = 0.2;
-        Direction = "Right";
-    }
-    if(keyboard_check(ord('A')) &amp;&amp; (place_free(x-2,y))){
-        x-=2;
-        sprite_index = spr_Player_Walk_Left; 
-        image_speed = 0.2;
-=======
-    if(keyboard_check(ord('W')) &amp;&amp; (place_free(x,y-4))){
-        y-=2;
+    if(keyboard_check(ord('W')) &amp;&amp; (place_free(x,y-Speed))){
+        y-=Speed;
         sprite_index = spr_Player_Walk_Up; 
         image_speed = 0.5;
         Direction = "Up";
     }
-    if(keyboard_check(ord('D')) &amp;&amp; (place_free(x+4,y))){
-        x+=2;
+    if(keyboard_check(ord('D')) &amp;&amp; (place_free(x+Speed,y))){
+        x+=Speed;
         sprite_index = spr_Player_Walk_Right; 
         image_speed = 0.5;
         Direction = "Right";
     }
-    if(keyboard_check(ord('A')) &amp;&amp; (place_free(x-4,y))){
-        x-=2;
+    if(keyboard_check(ord('A')) &amp;&amp; (place_free(x-Speed,y))){
+        x-=Speed;
         sprite_index = spr_Player_Walk_Left; 
         image_speed = 0.5;
->>>>>>> refs/remotes/origin/master
         Direction = "Left";
+    }
+    if (keyboard_check(vk_shift)){
+        Speed = 4;
+    }
+    else{
+        Speed = 2;
     }
     if(!keyboard_check(ord("D")) &amp;&amp; !keyboard_check(ord("A")) &amp;&amp; !keyboard_check(ord("S")) &amp;&amp;!keyboard_check(ord("W"))){
         if(Direction = "Down"){
-<<<<<<< HEAD
-        sprite_index = spr_Player_Down;
-        }
-        if(Direction = "Up"){
-        sprite_index = spr_Player_Up;
-        }
-        if(Direction = "Left"){
-        sprite_index = spr_Player_Left;
-        }
-        if(Direction = "Right"){
-        sprite_index = spr_Player_Right;
-        }
-    }
-=======
            sprite_index = spr_Player_Down;
         }
         if(Direction = "Up"){
@@ -142,7 +106,7 @@ if (Attacking = false){
             sprite_index = spr_Player_Right;
         }
    }
->>>>>>> refs/remotes/origin/master
+   global.Subimage = image_index;
 }
 </string>
           </argument>
@@ -207,17 +171,6 @@ if (Attacking = false){
             <string>///Atacking
 if (Attacking = false){
     if(mouse_check_button_pressed(mb_left)){
-<<<<<<< HEAD
-        if(Direction = "Down"){
-            sprite_index = spr_Player_Attack_Down;
-            speed = 0.1;
-            image_index = 0;
-            Attacking = true;
-        }
-        if(Direction = "Up"){
-            sprite_index = spr_Player_Attack_Up;
-            speed = 0.1;
-=======
         if(Direction = "Down"){//w jakim kierunku postac jest ustawion  
             sprite_index = spr_Player_Attack_Down;//wybieramy ktora animacje startujemy
             image_speed = 0.5;//z jaka predkoscia dziala animacja, dafault 1
@@ -227,27 +180,18 @@ if (Attacking = false){
         if(Direction = "Up"){
             sprite_index = spr_Player_Attack_Up;
             image_speed = 0.5;
->>>>>>> refs/remotes/origin/master
             image_index = 0;
             Attacking = true;
         }
         if(Direction = "Left"){
             sprite_index = spr_Player_Attack_Left;
-<<<<<<< HEAD
-            speed = 0.1;
-=======
             image_speed = 0.5;
->>>>>>> refs/remotes/origin/master
             image_index = 0;
             Attacking = true;
         }
         if(Direction = "Right"){
             sprite_index = spr_Player_Attack_Right;
-<<<<<<< HEAD
-            speed = 0.1;
-=======
             image_speed = 0.5;
->>>>>>> refs/remotes/origin/master
             image_index = 0;
             Attacking = true;
         }
@@ -302,10 +246,7 @@ room_goto(other.Warp_Room);
             <kind>1</kind>
             <string>if ( (sprite_index = spr_Player_Attack_Up) or (sprite_index = spr_Player_Attack_Down) or (sprite_index = spr_Player_Attack_Left) or (sprite_index = spr_Player_Attack_Right)){
     Attacking = false;
-<<<<<<< HEAD
-=======
     speed=0;
->>>>>>> refs/remotes/origin/master
 }
 </string>
           </argument>
