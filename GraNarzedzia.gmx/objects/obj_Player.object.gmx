@@ -26,6 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>///Deklaracja zmiennych globalnych
+
+global.Subimage = 0;
+Speed = 2;
 Attacking = false;
 Direction = "Down"
 Player_x = xstart;
@@ -55,9 +58,9 @@ Player_y = ystart;
             <string>///Movement
 if (Attacking = false){
     //Poruszanie na dol
-    if(keyboard_check(ord('S')) &amp;&amp; (place_free(x,y+4))){
+    if(keyboard_check(ord('S')) &amp;&amp; (place_free(x,y+Speed))){
     //jesli gracz wcisnie 's' i beda dwa miejsca w na vektor y wolne to zrob 
-        y+=2;
+        y+=Speed;
         sprite_index = spr_Player_Walk_Down; 
         //przypisanie animacji do obiektu bo obiekt robi sie z jednej klatk
         image_speed = 0.5;
@@ -65,23 +68,29 @@ if (Attacking = false){
         Direction = "Down";
     }
     //Poruszanie na gore
-    if(keyboard_check(ord('W')) &amp;&amp; (place_free(x,y-4))){
-        y-=2;
+    if(keyboard_check(ord('W')) &amp;&amp; (place_free(x,y-Speed))){
+        y-=Speed;
         sprite_index = spr_Player_Walk_Up; 
         image_speed = 0.5;
         Direction = "Up";
     }
-    if(keyboard_check(ord('D')) &amp;&amp; (place_free(x+4,y))){
-        x+=2;
+    if(keyboard_check(ord('D')) &amp;&amp; (place_free(x+Speed,y))){
+        x+=Speed;
         sprite_index = spr_Player_Walk_Right; 
         image_speed = 0.5;
         Direction = "Right";
     }
-    if(keyboard_check(ord('A')) &amp;&amp; (place_free(x-4,y))){
-        x-=2;
+    if(keyboard_check(ord('A')) &amp;&amp; (place_free(x-Speed,y))){
+        x-=Speed;
         sprite_index = spr_Player_Walk_Left; 
         image_speed = 0.5;
         Direction = "Left";
+    }
+    if (keyboard_check(vk_shift)){
+        Speed = 4;
+    }
+    else{
+        Speed = 2;
     }
     if(!keyboard_check(ord("D")) &amp;&amp; !keyboard_check(ord("A")) &amp;&amp; !keyboard_check(ord("S")) &amp;&amp;!keyboard_check(ord("W"))){
         if(Direction = "Down"){
@@ -97,6 +106,7 @@ if (Attacking = false){
             sprite_index = spr_Player_Right;
         }
    }
+   global.Subimage = image_index;
 }
 </string>
           </argument>
