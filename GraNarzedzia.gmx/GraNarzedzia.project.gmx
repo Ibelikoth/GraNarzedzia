@@ -47,6 +47,7 @@
     <object>objects\obj_Teleport</object>
     <object>objects\obj_HUD</object>
     <object>objects\obj_Mage</object>
+    <object>objects\obj_skeleton_servant</object>
     <object>objects\obj_magicball</object>
     <object>objects\obj_respown</object>
   </objects>
