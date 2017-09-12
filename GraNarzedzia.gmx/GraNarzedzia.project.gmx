@@ -31,6 +31,7 @@
     <sprite>sprites\spr_Collision_Off</sprite>
     <sprite>sprites\spr_Teleport</sprite>
     <sprite>sprites\spr_Health_Mana</sprite>
+    <sprite>sprites\sprite17</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_allinone</background>
@@ -45,6 +46,10 @@
     <object>objects\ocj_Column</object>
     <object>objects\obj_Teleport</object>
     <object>objects\obj_HUD</object>
+    <object>objects\obj_Mage</object>
+    <object>objects\obj_skeleton_servant</object>
+    <object>objects\obj_magicball</object>
+    <object>objects\obj_respown</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_TestRoom</room>
