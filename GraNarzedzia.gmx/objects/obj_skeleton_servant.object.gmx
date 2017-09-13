@@ -37,32 +37,6 @@ atak = 0;
         </arguments>
       </action>
     </event>
-    <event eventtype="1" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
-        <codestring></codestring>
-        <whoName>obj_respown</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>30</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>10</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="2">
       <action>
         <libid>1</libid>
@@ -111,9 +85,7 @@ atak = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_healthbar(self.x-20,self.y-20,self.x + 20,self.y -25,zdrowie,c_black,c_red,c_green,0,true,true);
-draw_sprite(spr_Player_Walk_Down,0,self.x,self.y);
-if (zdrowie &lt;=0)
+            <string>if (zdrowie &lt;=0)
 {
     instance_destroy();
 }
@@ -342,6 +314,30 @@ zdrowie = zdrowie - 25;
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_healthbar(self.x-20,self.y-20,self.x + 20,self.y -25,zdrowie,c_black,c_red,c_green,0,true,true);
+draw_sprite(spr_Player_Walk_Down,0,self.x,self.y);
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
   </events>
