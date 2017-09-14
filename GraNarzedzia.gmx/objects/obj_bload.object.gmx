@@ -49,7 +49,7 @@ move_towards_point(obj_ghost_servant.x,obj_ghost_servant.y,5);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.stamina = global.stamina - 2;
+            <string>global.stamina = global.stamina - 0.125;
 </string>
           </argument>
         </arguments>

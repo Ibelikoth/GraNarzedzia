@@ -49,7 +49,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.stamina = global.stamina - 2;
+            <string>global.stamina = global.stamina - 1;
 </string>
           </argument>
         </arguments>
