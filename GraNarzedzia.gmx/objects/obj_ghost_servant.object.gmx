@@ -30,60 +30,9 @@ blokpion = 0;
 blokpo = 0;
 priorytet =0;
 czy = 0;
-dystans = 140;
+dystans = 3;
 atak = 0;
-przywolanie =0;
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>111</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move_random</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="1" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
-        <codestring></codestring>
-        <whoName>obj_respown</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>30</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>10</string>
           </argument>
         </arguments>
       </action>
@@ -105,13 +54,13 @@ przywolanie =0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(distance_to_point(obj_Player.x,obj_Player.y)&lt;=dystans)
+            <string>if(distance_to_point(obj_Player.x,obj_Player.y)&lt;=40)
 {
     atak = atak + 1;
-    if (atak &gt;= 20)
+    if (atak &gt;= 5)
     {
         atak = 0;
-        instance_create(self.x,self.y,obj_magicball)
+        instance_create(obj_Player.x,obj_Player.y,obj_bload);
     }
 }
 </string>
@@ -295,66 +244,6 @@ else if(obj_Player.y&gt;self.y &amp;&amp; (priorytet = 2 || priorytet = 0))
 else
 {
 move_towards_point(self.x,self.y,0)
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///przywołanie szkieletow
-if(distance_to_point(obj_Player.x,obj_Player.y)&lt;dystans/2)
-{
-przywolanie = przywolanie +1;
-if(przywolanie &gt;= 30)
-{
-instance_create(self.x,self.y,obj_skeleton_servant);
-instance_create(self.x,self.y,obj_skeleton_servant);
-instance_create(self.x,self.y,obj_skeleton_servant);
-przywolanie = 0;
-}
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///przywołanie duchow
-if(distance_to_point(obj_Player.x,obj_Player.y)&lt;dystans/2)
-{
-if(przywolanie % 15 == 0)
-{
-instance_create(self.x,self.y,obj_ghost_servant);
-}
 }
 </string>
           </argument>
