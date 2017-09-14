@@ -57,7 +57,7 @@ atak = 0;
             <string>if(distance_to_point(obj_Player.x,obj_Player.y)&lt;=40)
 {
     atak = atak + 1;
-    if (atak &gt;= 5)
+    if (atak &gt;= 9)
     {
         atak = 0;
         instance_create(obj_Player.x,obj_Player.y,obj_bload);

@@ -323,8 +323,6 @@ przywolanie = przywolanie +1;
 if(przywolanie &gt;= 10)
 {
 instance_create(self.x,self.y,obj_skeleton_servant);
-instance_create(self.x,self.y,obj_skeleton_servant);
-instance_create(self.x,self.y,obj_skeleton_servant);
 przywolanie = 0;
 }
 }
@@ -351,7 +349,7 @@ przywolanie = 0;
             <string>///przywołanie duchow
 if(distance_to_point(obj_Player.x,obj_Player.y)&lt;dystans/2)
 {
-if(przywolanie % 15 == 0)
+if(przywolanie % 29 == 0)
 {
 instance_create(self.x,self.y,obj_ghost_servant);
 }
