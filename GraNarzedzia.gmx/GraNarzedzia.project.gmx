@@ -25,12 +25,19 @@
         <sprite>sprites\spr_Player_Attack_Left</sprite>
         <sprite>sprites\spr_Player_Attack_Right</sprite>
       </sprites>
+      <sprites name="Mage">
+        <sprite>sprites\sprite20</sprite>
+        <sprite>sprites\sprite21</sprite>
+        <sprite>sprites\sprite22</sprite>
+      </sprites>
     </sprites>
     <sprite>sprites\spr_Collision</sprite>
     <sprite>sprites\spr_Column</sprite>
     <sprite>sprites\spr_Collision_Off</sprite>
     <sprite>sprites\spr_Teleport</sprite>
     <sprite>sprites\spr_Health_Mana</sprite>
+    <sprite>sprites\spr_magicball</sprite>
+    <sprite>sprites\spr_bload</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_allinone</background>
@@ -45,7 +52,12 @@
     <object>objects\ocj_Column</object>
     <object>objects\obj_Teleport</object>
     <object>objects\obj_HUD</object>
-    <object>objects\Obj_Player_Motion_Blur</object>
+    <object>objects\obj_Mage</object>
+    <object>objects\obj_skeleton_servant</object>
+    <object>objects\obj_ghost_servant</object>
+    <object>objects\obj_magicball</object>
+    <object>objects\obj_bload</object>
+    <object>objects\obj_respown</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_TestRoom</room>
