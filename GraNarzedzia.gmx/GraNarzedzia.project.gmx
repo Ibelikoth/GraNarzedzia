@@ -31,7 +31,8 @@
     <sprite>sprites\spr_Collision_Off</sprite>
     <sprite>sprites\spr_Teleport</sprite>
     <sprite>sprites\spr_Health_Mana</sprite>
-    <sprite>sprites\sprite17</sprite>
+    <sprite>sprites\spr_magicball</sprite>
+    <sprite>sprites\spr_bload</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_allinone</background>
@@ -48,7 +49,9 @@
     <object>objects\obj_HUD</object>
     <object>objects\obj_Mage</object>
     <object>objects\obj_skeleton_servant</object>
+    <object>objects\obj_ghost_servant</object>
     <object>objects\obj_magicball</object>
+    <object>objects\obj_bload</object>
     <object>objects\obj_respown</object>
   </objects>
   <rooms name="rooms">
